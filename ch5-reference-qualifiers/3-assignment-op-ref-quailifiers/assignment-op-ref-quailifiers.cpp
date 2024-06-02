@@ -7,11 +7,7 @@ struct C
 
   // by declaring operator with &,
   // we make sure it can't be called for temporary objects
-  C &operator=(const C &c) &
-  {
-    o = c.o;
-    return *this;
-  }
+  C &operator=(const C &c) & = default;
 };
 
 C getC()
